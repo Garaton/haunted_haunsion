@@ -51,7 +51,7 @@ public class Game{
 
 		
 		//normal fightstyle
-		if(enemy.getStyle()==0){
+		if(enemy.getStyle()==combatStyle.NORMAL){
 			while(true){
 				System.out.println("\n\nYour Hp : "+playerHp+"/"+player.getHealth()+"\nEnemy Hp: "+enemyHp+"/"+enemy.getHealth()+"\n");
 				inpu = move("It is your turn","1. Attack\n2. Heal/Defend\n3. Retreat",3);
@@ -131,7 +131,7 @@ public class Game{
 
 		
 		//boss fightstyle
-		else if(enemy.getStyle()==1){
+		else if(enemy.getStyle()==combatStyle.BOSS){
 			while(true){
 				System.out.println("\n\nYour Hp : "+playerHp+"/"+player.getHealth()+"\nEnemy Hp: "+enemyHp+"/"+enemy.getHealth()+"\n");
 				inpu = move("It is your turn","1. Attack\n2. Heal/Defend",2);
@@ -190,8 +190,8 @@ public class Game{
 
 
 		
-		//defenceless fightstyle
-		else if(enemy.getStyle()==2){
+		//peaceful fightstyle
+		else if(enemy.getStyle()==combatStyle.PEACEFUL){
 			while(true){
 				System.out.println("\n\nYour Hp : "+playerHp+"/"+player.getHealth()+"\nEnemy Hp: "+enemyHp+"/"+enemy.getHealth()+"\n");
 				inpu = move("It is your turn","1. Attack\n2. Retreat",2);

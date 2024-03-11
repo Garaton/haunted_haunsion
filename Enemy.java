@@ -1,9 +1,18 @@
-//the enemy class is basically only for combat and stores variables to use, done this way for it being easier to edit the enemies
+// enum for combat styles
+
+enum combatStyle{
+	NORMAL,
+	PEACEFUL,
+	BOSS;
+}
+
+// the enemy class is basically only for combat and stores variables to use, done this way for it being easier to edit the enemies
 
 public class Enemy{
-	private int hp, atk, expValue, style;
+	private int hp, atk, expValue;
+	private combatStyle style;
 	private String name;
-	public Enemy (int health, int attack, int exp, String nam, int fighting){
+	public Enemy (int health, int attack, int exp, String nam, combatStyle fighting){
 		hp = health;
 		atk = attack;
 		name = nam;
@@ -25,7 +34,7 @@ public class Enemy{
 		return expValue;
 	}
 	//style determines how it fights, 0 is normal fighting, 1 is boss fighitng (boss can't retreat), 2 is defenseless fighting style (for things that can't fight back, they only retreat)
-	public int getStyle(){
+	public combatStyle getStyle(){
 		return style;
 	}
 

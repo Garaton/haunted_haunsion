@@ -12,8 +12,8 @@ public class Player{
 		System.out.println("Enter the name of your Character!");
 		name = namething.next();
 		namething.close();
-		inventory = new String[999];
-		invVal = new int[999];
+		inventory = new String[50];
+		invVal = new int[50];
 		invMax = inv;
 		invSize = 0;
 		gold = 10;

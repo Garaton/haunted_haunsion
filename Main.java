@@ -11,21 +11,21 @@ class Main {
 		
 		//enemies
 		//tutorial enemy
-		Enemy trainingDummy = new Enemy(5,1,0,"Training Dummy",0);
+		Enemy trainingDummy = new Enemy(5,1,0,"Training Dummy",combatStyle.NORMAL);
 		
 		//random encounters
-		Enemy monster = new Enemy(5,1,50,"Monster",0);
-		Enemy rat = new Enemy(2,9999,50,"Rat",2);
-		Enemy ghostMinor = new Enemy(12,2,50,"Minor Ghost",0);
-		Enemy ghostMajor = new Enemy(20,3,50,"Major Ghost",0);
-		Enemy powerfulGhost = new Enemy(40,4,50,"Powerful Ghost",0);
+		Enemy monster = new Enemy(5,1,50,"Monster",combatStyle.NORMAL);
+		Enemy rat = new Enemy(2,9999,50,"Rat",combatStyle.PEACEFUL);
+		Enemy ghostMinor = new Enemy(12,2,50,"Minor Ghost",combatStyle.NORMAL);
+		Enemy ghostMajor = new Enemy(20,3,50,"Major Ghost",combatStyle.NORMAL);
+		Enemy powerfulGhost = new Enemy(40,4,50,"Powerful Ghost",combatStyle.NORMAL);
 
 		//bosses
-		Enemy boss1 = new Enemy(10,1,500,"Spirit of the Shower",1);
-		Enemy boss2 = new Enemy(30,2,500,"Spirit of the Closet",1);
-		Enemy boss3 = new Enemy(50,4,500,"Spirit of the Bedroom",1);
-		Enemy boss4 = new Enemy(80,6,1,"Spirit of the House",1);
-		Enemy theGame = new Enemy(214,7,483,"Kr99KXwcJPgOIDRXg8qP",1);
+		Enemy boss1 = new Enemy(10,1,500,"Spirit of the Shower",combatStyle.BOSS);
+		Enemy boss2 = new Enemy(30,2,500,"Spirit of the Closet",combatStyle.BOSS);
+		Enemy boss3 = new Enemy(50,4,500,"Spirit of the Bedroom",combatStyle.BOSS);
+		Enemy boss4 = new Enemy(80,6,1,"Spirit of the House",combatStyle.BOSS);
+		Enemy theGame = new Enemy(214,7,483,"Kr99KXwcJPgOIDRXg8qP",combatStyle.BOSS);
 
 		//for the infinate hallway, made to mirror the player
 		Enemy hallGhost;
@@ -663,7 +663,7 @@ class Main {
 		}
 		while(!dead){
 			//combat part inf hallway
-			hallGhost=new Enemy(player.getHealth(),player.getAttack(),100,"Yourself",1);
+			hallGhost=new Enemy(player.getHealth(),player.getAttack(),100,"Yourself",combatStyle.BOSS);
 			temp = game.combat(player,hallGhost);
 			if(temp > 0){
 				player.addExp(temp);
