@@ -5,7 +5,6 @@ public class Game{
 	//the move method, it makes sure a correct option is chosen
 	public int move(String message, String options, int numOptions){
 		int playerInput = 0;
-		String inut = "";
 		Scanner input = new Scanner(System.in);
 		System.out.println(message+", what do you do?\n"+options);
 		boolean exists = false;
@@ -20,6 +19,7 @@ public class Game{
 			}
 		}
 		System.out.println();
+		input.close();
 		return playerInput;
 	}
 

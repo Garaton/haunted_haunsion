@@ -3,7 +3,7 @@ class Main {
   public static void main(String[] args) {
 		//variables for preforming game actions
 		int playerInput=0;
-    Game game = new Game();
+    	Game game = new Game();
 		Scanner inputTracker = new Scanner(System.in);
 
 		//the player, self evident
@@ -678,6 +678,11 @@ class Main {
 			//hall part
 			playerInput=game.move("You are in a hallway that seems to extend into infinity, and have defeated "+numHalls+" of ghosts that seem to take your form","1. Continue on.",1);
 		}
+		if(dead||done){
+			inputTracker.close();
+		}
     }
+
+	
 }
 

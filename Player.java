@@ -11,6 +11,7 @@ public class Player{
 		Scanner namething = new Scanner(System.in);
 		System.out.println("Enter the name of your Character!");
 		name = namething.next();
+		namething.close();
 		inventory = new String[999];
 		invVal = new int[999];
 		invMax = inv;
@@ -152,6 +153,7 @@ public class Player{
 					}
 				}
 			}
+			playerIn.close();
 		} else {
 			inventory[invSize] = add;
 			invVal[invSize] = value;
@@ -212,6 +214,7 @@ public class Player{
 				System.out.println("enter \"0\" for 1 more hp, or enter \"1\" for 1 more atk");
 				choice = which.nextInt();
 			}
+			which.close();
 			exp-=100;
 		}
 	}
